@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuriyes Bookstore</title>
+
+  <!-- Bootstrap library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!--Axios cdn<-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+  <!--Vue cdn-->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <style>
+    #bookRow{
+      font-family: 'Times New Roman';
+    }
+
+    #getButton{
+      background-color: hotpink;
+      border: none;
+    }
+
+    #gif{
+      margin-top: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm text-center">
+          <button class="btn btn-primary" @click="getBooks" id="getButton">&#9825; Show all books &#9825;</button>
+        </div>
+      </div>
+      <div class="row" id="bookRow">
+        <div v-for="book in books" class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">{{ book.title }}</h3>
+              <p class="card-text">{{ book.price }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <center><img id="gif" src="/images/barnes.gif" alt="justagif"></center>
+
+  <script src="index.js"></script>
+</body>
+</html>
+
