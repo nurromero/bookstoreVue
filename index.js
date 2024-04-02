@@ -17,6 +17,10 @@ Vue.createApp({
       } catch (error) {
         console.error("Error fetching books:", error);
       }
+    },
+
+    async clearBooks() {
+      this.books = [];
     }
   },
  

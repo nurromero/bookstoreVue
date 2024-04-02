@@ -20,6 +20,35 @@
     #getButton{
       background-color: hotpink;
       border: none;
+      margin-right: 5px;
+      margin-top: 5px;
+      width: 150px;
+      height: 50px;
+    }
+
+    #getButton:hover{
+      background-color: lightpink;
+    }
+
+    #getButton:active{
+      background-color: hotpink;
+    }
+
+    #clearButton{
+      background-color: hotpink;
+      border: none;
+      margin-top: 5px;
+      width: 150px;
+      height: 50px;
+
+    }
+
+    #clearButton:hover{
+      background-color: lightpink;
+    }
+
+    #clearButton:active{
+      background-color: hotpink;
     }
 
     #gif{
@@ -34,6 +63,7 @@
       <div class="row">
         <div class="col-sm text-center">
           <button class="btn btn-primary" @click="getBooks" id="getButton">&#9825; Show all books &#9825;</button>
+          <button class="btn btn-primary" @click="clearBooks" id="clearButton">&#9825; Clear books &#9825;</button>
         </div>
       </div>
       <div class="row" id="bookRow">
